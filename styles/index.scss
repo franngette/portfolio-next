@@ -1,0 +1,23 @@
+@import "mixins.scss";
+@import "colors.scss";
+@import "variables.scss";
+@import "resets.scss";
+@import "animations.scss";
+
+//Components
+
+@import "../components/About/index.scss";
+@import "../components/Content/index.scss";
+@import "../components/Footer/index.scss";
+@import "../components/Header/index.scss";
+@import "../components/Presentation/index.scss";
+@import "../components/Presentation/PresAnimation/index.scss";
+@import "../components/Project/index.scss";
+@import "../components/ProjectsContainer/index.scss";
+@import "../components/SlideImages/index.scss";
+@import "../components/TechIcons/index.scss";
+@import "../components/Technologies/index.scss";
+
+:root {
+  font-family: "Raleway", sans-serif;
+}
