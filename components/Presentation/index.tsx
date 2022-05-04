@@ -1,28 +1,42 @@
-import React from "react";
-import { motion } from "framer-motion";
-import PresAnimation from "./PresAnimation";
+import React from "react"
+import { motion } from "framer-motion"
+import PresAnimation from "./PresAnimation"
+import Image from "next/image"
 
 const Presentation: React.FC = () => {
   return (
     <div className="pres">
-      <motion.div className="pres__container" >
-        <motion.h1 className="pres__container__title" animate={{ translateX: 100, opacity: 1 }} transition={{ duration: 2 }} initial={{ x: -100 }}>
+      <motion.div className="pres__container">
+        <motion.h1
+          className="pres__container__title"
+          animate={{ translateX: 100, opacity: 1 }}
+          transition={{ duration: 2 }}
+          initial={{ x: -100 }}
+        >
           Hi there, I'm Francis.
         </motion.h1>
-        <motion.h1 className="pres__container__description" animate={{ opacity: 1 }} transition={{ duration: 2, delay: 2 }}>
+        <motion.h1
+          className="pres__container__description"
+          animate={{ opacity: 1 }}
+          transition={{ duration: 2, delay: 2 }}
+        >
           Frontend Developer.
         </motion.h1>
-        <motion.h1 className="pres__container__description" animate={{ opacity: 1 }} transition={{ duration: 1, delay: 3 }}>
+        <motion.h1
+          className="pres__container__description"
+          animate={{ opacity: 1 }}
+          transition={{ duration: 1, delay: 3 }}
+        >
           Translating ideas into code.
         </motion.h1>
       </motion.div>
       <div className="pres__img">
-        <img src='./images/me.jpg' alt='Francis Gette' className="pres__img--framed" />
+        <Image src="/images/me.jpg" alt="Francis Gette" className="pres__img--framed" layout="fill" />
       </div>
 
       <PresAnimation />
     </div>
-  );
-};
+  )
+}
 
-export default Presentation;
+export default Presentation
