@@ -1,5 +1,6 @@
 import React from "react"
 import { Icons } from "./iconPath"
+import Image from "next/image"
 
 type Props = {
   tech: string[]
@@ -8,8 +9,12 @@ type Props = {
 const TechIcons: React.FC<Props> = ({ tech }) => {
   const renderIcons = () => {
     return tech.map((el, i) => (
-      <div key={i + el} className="techicons_container" style={{ backgroundColor: el === "reactnative" ? "#222" : "white" }}>
-        <img src={Icons[el]} alt={el} className="techicons_container_item" title={el} />
+      <div
+        key={i + el}
+        className="techicons_container"
+        style={{ backgroundColor: el === "reactnative" ? "#222" : "white" }}
+      >
+        <Image src={Icons[el]} alt={el} title={el} placeholder="blur" blurDataURL={Icons[el]} height={30} width={30} />
       </div>
     ))
   }
